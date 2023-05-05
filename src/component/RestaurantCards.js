@@ -1,16 +1,19 @@
 import React from "react";
 import style from "./ResBody.module.css";
+import { image } from "../constants/imageUrl";
 
-const RestaurantCards = () => {
+const RestaurantCards = ({
+  name,
+  cloudinaryImageId,
+  cuisines,
+  lastMileTravelString,
+}) => {
   return (
     <div className={style.card_main}>
-      <img
-        src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg?resize=1200:*"
-        alt="pizza"
-      />
-      <h2>Rominus Pizza & Burger</h2>
-      <h4>Italian-American, Pizzas</h4>
-      <h3>4.1 Satr</h3>
+      <img src={image + cloudinaryImageId} alt="pizza" />
+      <h2>{name}</h2>
+      <h4>{cuisines}</h4>
+      <h3>{lastMileTravelString}</h3>
     </div>
   );
 };

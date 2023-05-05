@@ -1,13 +1,20 @@
-import React from 'react'
+import React from "react";
 import style from "./ResBody.module.css";
 
-const Search = () => {
+const Search = ({ searchText, setSearchText, searchHandler }) => {
   return (
     <div className={style.search}>
-      <input type="text" placeholder='Search' />
-      <button>Search</button>
+      <input
+        type="text"
+        placeholder="Search"
+        value={searchText}
+        onChange={(e) => {
+          setSearchText(e.target.value);
+        }}
+      />
+      <button onClick={searchHandler}>Search</button>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

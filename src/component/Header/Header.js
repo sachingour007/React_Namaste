@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import style from "./Header.module.css";
 
@@ -9,6 +9,7 @@ const Header = () => {
         src="https://cdn.dotpe.in/longtail/store-logo/7781322/efYdpGRb.jpeg"
         alt="logo"
       />
+      <h2>Food Corner</h2>
       <Navbar />
     </div>
   );
