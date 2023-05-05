@@ -1,0 +1,23 @@
+.header_main{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px 0 10px 0;
+}
+.header_main > img{
+    width: 100px;
+    height: 80px;
+}
+.navbar_main > ul{
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+}
+.navbar_main > ul > li{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+
+}

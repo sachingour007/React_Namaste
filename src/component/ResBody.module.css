@@ -1,0 +1,40 @@
+.main_body {
+  border-top: 2px solid rgb(90, 89, 89);
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 1.5rem;
+  column-gap: 2rem;
+}
+.card_main {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 2px;
+  flex: 1 1 200px;
+}
+.card_main > img {
+  width: 210px;
+  height: 150px;
+}
+.card_main > h2 {
+  font-size: 17px;
+  margin: 2px 0 5px 1px;
+}
+.card_main > h4 {
+  font-size: 12px;
+  color: gray;
+  margin: 2px 0 5px 1px;
+}
+.card_main > h3 {
+  font-size: 15px;
+  margin: 2px 0 5px 1px;
+  background-color: rgb(6, 183, 6);
+  display: inline-block;
+  padding: 3px;
+}
+.search {
+  margin: 5px;
+}
