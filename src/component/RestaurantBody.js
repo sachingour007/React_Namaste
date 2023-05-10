@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import Search from "./Search";
 import RestaurantCards from "./RestaurantCards";
 import style from "./ResBody.module.css";
-import LoaderShimmer from "./LoaderShimmer";
+import LoaderShimmer from "./ShimmerUIBox/LoaderShimmer";
+import { NavLink } from "react-router-dom";
 
 //SEARCH FUNCTION ALGORITHAM
 function filterData(searchText, restroList) {
   const data = restroList.filter((restro) =>
-    restro.data.name.includes(searchText)
+    restro?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase())
   );
   return data;
 }
@@ -35,7 +36,6 @@ const RestaurantBody = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.2138156&lng=75.8647527&page_type=DESKTOP_WEB_LISTING"
     );
     const data = await res.json();
-    console.log(data);
     //Option Chaining
     setRestroList(data?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestroList(data?.data?.cards[2]?.data?.data?.cards);
@@ -44,7 +44,7 @@ const RestaurantBody = () => {
   //not render component
   // if(!restroList) return null
 
-  if (filteredRestroList?.length === 0) return <h2>No Data Found..!!!</h2>;
+  if (filteredRestroList?.length === 0) return <LoaderShimmer />;
 
   return restroList?.length === 0 ? (
     <LoaderShimmer />
@@ -59,7 +59,12 @@ const RestaurantBody = () => {
         <div className={style.cards}>
           {filteredRestroList.map((restrorant) => {
             return (
-              <RestaurantCards {...restrorant.data} key={restrorant.data.id} />
+              <NavLink
+                to={"/restaurant/" + restrorant.data.id}
+                key={restrorant.data.id}
+              >
+                <RestaurantCards {...restrorant.data} />
+              </NavLink>
             );
           })}
         </div>

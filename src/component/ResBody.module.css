@@ -10,13 +10,11 @@
   column-gap: 2rem;
 }
 .card_main {
-  width: 16%;
   height: 250px;
-  /* border: 1px solid black; */
   margin: 5px;
   padding: 2px;
   border-radius: 10px;
-  /* flex: 1 1 200px; */
+  flex: 1 1 200px;
 }
 .card_main > img {
   height: 152px;
