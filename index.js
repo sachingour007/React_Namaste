@@ -7,6 +7,7 @@ import Contact from "./src/component/contact/Contact";
 import Errors from "./src/component/Errors";
 import FoodDetails from "./src/component/FoodDetails/FoodDetails";
 
+
 const appRouter = createBrowserRouter([
   {
     path: "/",

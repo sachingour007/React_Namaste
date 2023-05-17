@@ -3,11 +3,13 @@ import './App.css'
 import Header from './component/Header/Header'
 import RestaurantBody from './component/RestaurantBody';
 import {Outlet} from 'react-router-dom'
+import Home from './component/Home';
 
 const App = () => {
   return (
    <div className='main'>
-   <Header />
+   {/* <Header /> */}
+   <Home/>
 
    {/* OutLet */}
    <Outlet />

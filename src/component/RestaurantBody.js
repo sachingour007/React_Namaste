@@ -42,7 +42,7 @@ const RestaurantBody = () => {
   };
 
   //not render component
-  // if(!restroList) return null
+  if(restroList?.length === 0) return null;
 
   if (filteredRestroList?.length === 0) return <LoaderShimmer />;
 
