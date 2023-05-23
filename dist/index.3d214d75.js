@@ -27205,14 +27205,14 @@ const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "main",
         children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 11,
+                columnNumber: 4
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
                 lineNumber: 12,
-                columnNumber: 4
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 15,
                 columnNumber: 4
             }, undefined)
         ]
@@ -27244,29 +27244,43 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _imageUrl = require("../../constants/imageUrl");
+var _pngwingComPng = require("../../utils/image cover/pngwing.com.png");
+var _pngwingComPngDefault = parcelHelpers.interopDefault(_pngwingComPng);
 var _navbar = require("./Navbar");
 var _navbarDefault = parcelHelpers.interopDefault(_navbar);
 const Header = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex items-center justify-between w-full mx-auto px-3",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "w-24 h-20",
-                src: (0, _imageUrl.LOGO_URL),
-                alt: "logo"
-            }, void 0, false, {
-                fileName: "src/component/Header/Header.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
-                fileName: "src/component/Header/Header.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+        className: "w-full shadow-md sticky top-0 mb-8 bg-white p-2 ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex justify-between items-center max-w-screen-xl mx-auto",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        className: "w-24 h-20",
+                        src: (0, _pngwingComPngDefault.default),
+                        alt: "logo"
+                    }, void 0, false, {
+                        fileName: "src/component/Header/Header.js",
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/component/Header/Header.js",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
+                    fileName: "src/component/Header/Header.js",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/component/Header/Header.js",
+            lineNumber: 8,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/component/Header/Header.js",
         lineNumber: 7,
         columnNumber: 5
@@ -27282,45 +27296,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../constants/imageUrl":"eWtTu","./Navbar":"6FPTK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eWtTu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "image", ()=>image);
-parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
-const image = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const LOGO_URL = "https://cdn.dotpe.in/longtail/store-logo/7781322/efYdpGRb.jpeg";
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"6FPTK":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Navbar":"6FPTK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../utils/image cover/pngwing.com.png":"kXX7d"}],"6FPTK":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$c0f7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27346,9 +27322,9 @@ const Navbar = ()=>{
     console.log({
         id
     });
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex items-center md:flex md:items-center",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -27372,7 +27348,7 @@ const Navbar = ()=>{
                                 }, undefined);
                             }),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "capitalize font-medium border-2 border-orange-300 rounded-lg hover:bg-orange-400 hover:text-white font-serif w-28 h-10 ",
+                                className: "capitalize font-medium border-2 border-green-300 rounded-lg hover:bg-green-600 transition-all hover:text-white font-serif w-28 h-10 ",
                                 children: "Cart"
                             }, void 0, false, {
                                 fileName: "src/component/Header/Navbar.js",
@@ -27390,19 +27366,11 @@ const Navbar = ()=>{
                             setNav(!nav);
                         },
                         className: "cursor-pointer pr-4 z-20 md:hidden ",
-                        children: nav ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _closeRoundedDefault.default), {
-                            sx: {
-                                color: "rgb(251, 146, 60)"
-                            }
-                        }, void 0, false, {
+                        children: nav ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _closeRoundedDefault.default), {}, void 0, false, {
                             fileName: "src/component/Header/Navbar.js",
                             lineNumber: 37,
                             columnNumber: 13
-                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableRowsRoundedDefault.default), {
-                            sx: {
-                                color: "rgb(251, 146, 60)"
-                            }
-                        }, void 0, false, {
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableRowsRoundedDefault.default), {}, void 0, false, {
                             fileName: "src/component/Header/Navbar.js",
                             lineNumber: 39,
                             columnNumber: 13
@@ -27439,7 +27407,7 @@ const Navbar = ()=>{
                         }, undefined);
                     }),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "capitalize font-medium border-2 border-orange-300 rounded-lg hover:bg-orange-400 hover:text-white font-serif w-28 h-10 ",
+                        className: "capitalize font-medium border-2 border-green-300 rounded-lg hover:bg-green-600 hover:text-white font-serif w-28 h-10 ",
                         children: "Cart"
                     }, void 0, false, {
                         fileName: "src/component/Header/Navbar.js",
@@ -27453,11 +27421,7 @@ const Navbar = ()=>{
                 columnNumber: 9
             }, undefined)
         ]
-    }, void 0, true, {
-        fileName: "src/component/Header/Navbar.js",
-        lineNumber: 12,
-        columnNumber: 5
-    }, undefined);
+    }, void 0, true);
 };
 _s(Navbar, "92DfTb657VkWnf5CSUfRDtrnfd8=", false, function() {
     return [
@@ -32694,7 +32658,37 @@ function getTargetMatch(matches, location) {
     return pathMatches[pathMatches.length - 1];
 } //#endregion
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("b0ec0b40be20909d");
 function debounce(func, delay) {
@@ -55556,7 +55550,44 @@ var _default = (0, _createSvgIcon.default)(/*#__PURE__*/ (0, _jsxRuntime.jsx)("p
 }), "TableRowsRounded");
 exports.default = _default;
 
-},{"58544a7292ba8f8b":"7XM86","eaa07223a7c0367a":"lVV9C","3efe4c55cc8d12a1":"6AEwr"}],"aucZc":[function(require,module,exports) {
+},{"58544a7292ba8f8b":"7XM86","eaa07223a7c0367a":"lVV9C","3efe4c55cc8d12a1":"6AEwr"}],"kXX7d":[function(require,module,exports) {
+module.exports = require("ce0ea4929fa26ee4").getBundleURL("UckoE") + "pngwing.com.b74d446b.png" + "?" + Date.now();
+
+},{"ce0ea4929fa26ee4":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"aucZc":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$c417 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -55797,7 +55828,15 @@ $RefreshReg$(_c, "RestaurantCards");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ResBody.module.css":"eZa0g","../constants/imageUrl":"eWtTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6ayBQ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ResBody.module.css":"eZa0g","../constants/imageUrl":"eWtTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eWtTu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "image", ()=>image);
+parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
+const image = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const LOGO_URL = "https://cdn.dotpe.in/longtail/store-logo/7781322/efYdpGRb.jpeg";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6ayBQ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0e09 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -55853,77 +55892,211 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _pexelsCatsComing1907227Jpg = require("../utils/image cover/pexels-cats-coming-1907227.jpg");
-var _pexelsCatsComing1907227JpgDefault = parcelHelpers.interopDefault(_pexelsCatsComing1907227Jpg);
-var _header = require("./Header/Header");
-var _headerDefault = parcelHelpers.interopDefault(_header);
+var _heroImagePng = require("../utils/image cover/hero_image.png");
+var _heroImagePngDefault = parcelHelpers.interopDefault(_heroImagePng);
+var _discountPng = require("../utils/image cover/Icons/discount.png");
+var _discountPngDefault = parcelHelpers.interopDefault(_discountPng);
+var _freshPng = require("../utils/image cover/Icons/fresh.png");
+var _freshPngDefault = parcelHelpers.interopDefault(_freshPng);
+var _deliveryPng = require("../utils/image cover/Icons/delivery.png");
+var _deliveryPngDefault = parcelHelpers.interopDefault(_deliveryPng);
 const Home = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-full h-full mx-auto ",
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                fileName: "src/component/Home.js",
-                lineNumber: 8,
-                columnNumber: 13
-            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "relative w-full h-96 bg-black",
+                className: "flex flex-col sm:flex-row items-center justify-center gap-5 m-5",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "w-full h-full mx-24",
-                        src: (0, _pexelsCatsComing1907227JpgDefault.default),
-                        alt: "bgImage"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "",
+                            src: (0, _heroImagePngDefault.default),
+                            alt: "Home Image"
+                        }, void 0, false, {
+                            fileName: "src/component/Home.js",
+                            lineNumber: 12,
+                            columnNumber: 11
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/component/Home.js",
-                        lineNumber: 10,
-                        columnNumber: 16
+                        lineNumber: 11,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "absolute bottom-2/4 left-10 ",
+                        className: "flex flex-col gap-5 ",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                className: "text-orange-400 text-xs",
-                                children: "Discover Your Teste"
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-green-600 self-start py-1 px-2 text-white",
+                                children: "50% Off on All Products"
                             }, void 0, false, {
                                 fileName: "src/component/Home.js",
-                                lineNumber: 13,
-                                columnNumber: 16
+                                lineNumber: 15,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "text-orange-400 text-1xl font-medium",
-                                children: [
-                                    "We belive good food offer ",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                        fileName: "src/component/Home.js",
-                                        lineNumber: 14,
-                                        columnNumber: 95
-                                    }, undefined),
-                                    " Greate smile"
-                                ]
-                            }, void 0, true, {
+                                className: "text-6xl leading-1 font-medium",
+                                children: "Enjoy Your Delicious Food"
+                            }, void 0, false, {
                                 fileName: "src/component/Home.js",
-                                lineNumber: 14,
-                                columnNumber: 16
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aliquam voluptatum vitae saepe quo expedita!"
+                            }, void 0, false, {
+                                fileName: "src/component/Home.js",
+                                lineNumber: 21,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "bg-orange-400 self-start py-2 px-3 border-none hover:bg-orange-6 00 ",
+                                children: "Explore Now"
+                            }, void 0, false, {
+                                fileName: "src/component/Home.js",
+                                lineNumber: 25,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/component/Home.js",
-                        lineNumber: 12,
-                        columnNumber: 16
+                        lineNumber: 14,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/component/Home.js",
-                lineNumber: 9,
-                columnNumber: 13
+                lineNumber: 10,
+                columnNumber: 7
             }, undefined),
-            "hello"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                className: "mt-12 mx-4 flex flex-col sm:flex-row sm:justify-center sm:items-center sm:gap-5 md:justify-center gap-5 mb-10 ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex items-center gap-4 md:ml-7 hover:shadow-lg hover:rounded-lg p-1",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _discountPngDefault.default),
+                                alt: "discountImg"
+                            }, void 0, false, {
+                                fileName: "src/component/Home.js",
+                                lineNumber: 32,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                        children: "Discount Voucher"
+                                    }, void 0, false, {
+                                        fileName: "src/component/Home.js",
+                                        lineNumber: 34,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "",
+                                        children: "Lorem ipsum dolor sit amet consectetur."
+                                    }, void 0, false, {
+                                        fileName: "src/component/Home.js",
+                                        lineNumber: 35,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/component/Home.js",
+                                lineNumber: 33,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/Home.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex items-center gap-4 hover:shadow-lg hover:rounded-lg p-1",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _freshPngDefault.default),
+                                alt: "discountImg"
+                            }, void 0, false, {
+                                fileName: "src/component/Home.js",
+                                lineNumber: 39,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                        children: "Fresh Healthy Food"
+                                    }, void 0, false, {
+                                        fileName: "src/component/Home.js",
+                                        lineNumber: 41,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "Lorem ipsum dolor sit amet consectetur."
+                                    }, void 0, false, {
+                                        fileName: "src/component/Home.js",
+                                        lineNumber: 42,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/component/Home.js",
+                                lineNumber: 40,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/Home.js",
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex items-center gap-4 md:mr-7 hover:shadow-lg hover:rounded-lg p-1",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _deliveryPngDefault.default),
+                                alt: "discountImg"
+                            }, void 0, false, {
+                                fileName: "src/component/Home.js",
+                                lineNumber: 46,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                        children: "Fast Home Delivery"
+                                    }, void 0, false, {
+                                        fileName: "src/component/Home.js",
+                                        lineNumber: 48,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "Lorem ipsum dolor sit amet consectetur."
+                                    }, void 0, false, {
+                                        fileName: "src/component/Home.js",
+                                        lineNumber: 49,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/component/Home.js",
+                                lineNumber: 47,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/Home.js",
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/component/Home.js",
+                lineNumber: 30,
+                columnNumber: 7
+            }, undefined)
         ]
-    }, void 0, true, {
-        fileName: "src/component/Home.js",
-        lineNumber: 7,
-        columnNumber: 9
-    }, undefined);
+    }, void 0, true);
 };
 _c = Home;
 exports.default = Home;
@@ -55935,44 +56108,19 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/image cover/pexels-cats-coming-1907227.jpg":"5XeWv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Header/Header":"36DJP"}],"5XeWv":[function(require,module,exports) {
-module.exports = require("5827fac1910fde9f").getBundleURL("UckoE") + "pexels-cats-coming-1907227.cf36aeed.jpg" + "?" + Date.now();
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/image cover/hero_image.png":"6nAmL","../utils/image cover/Icons/discount.png":"bdswU","../utils/image cover/Icons/delivery.png":"4LIr8","../utils/image cover/Icons/fresh.png":"6vit0"}],"6nAmL":[function(require,module,exports) {
+module.exports = require("eeee5eb1740c4f1b").getBundleURL("UckoE") + "hero_image.fee86a13.png" + "?" + Date.now();
 
-},{"5827fac1910fde9f":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
+},{"eeee5eb1740c4f1b":"lgJ39"}],"bdswU":[function(require,module,exports) {
+module.exports = require("e61ee7fc8cad32de").getBundleURL("UckoE") + "discount.40ffe553.png" + "?" + Date.now();
 
-},{}],"4ozmG":[function(require,module,exports) {
+},{"e61ee7fc8cad32de":"lgJ39"}],"4LIr8":[function(require,module,exports) {
+module.exports = require("15e9ae2259fbd1df").getBundleURL("UckoE") + "delivery.4c8c2b05.png" + "?" + Date.now();
+
+},{"15e9ae2259fbd1df":"lgJ39"}],"6vit0":[function(require,module,exports) {
+module.exports = require("10c90549d3ae95aa").getBundleURL("UckoE") + "fresh.9b6f25fe.png" + "?" + Date.now();
+
+},{"10c90549d3ae95aa":"lgJ39"}],"4ozmG":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6185 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

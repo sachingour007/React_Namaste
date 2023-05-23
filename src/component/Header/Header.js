@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { LOGO_URL } from "../../constants/imageUrl";
+import Logo from "../../utils/image cover/pngwing.com.png";
 import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between w-full mx-auto px-3">
-      <img className="w-24 h-20" src={LOGO_URL} alt="logo" />
-      <Navbar />
-    </div>
+    <nav className="w-full shadow-md sticky top-0 mb-8 bg-white p-2 ">
+      <div className="flex justify-between items-center max-w-screen-xl mx-auto">
+        <div>
+          <img className="w-24 h-20" src={Logo} alt="logo" />
+        </div>
+        
+        <Navbar />
+      </div>
+    </nav>
   );
 };
 

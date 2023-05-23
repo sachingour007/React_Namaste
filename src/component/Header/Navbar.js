@@ -9,8 +9,8 @@ const Navbar = () => {
   const { id } = useParams();
   console.log({ id });
   return (
-    <div>
-      <nav className="flex items-center md:flex md:items-center">
+    <>
+      <div className="flex items-center md:flex md:items-center">
         <ul className=" hidden md:flex md:items-center">
           {NavBar.map(({ Title, id, to }) => {
             return (
@@ -23,7 +23,7 @@ const Navbar = () => {
             );
           })}
 
-          <button className="capitalize font-medium border-2 border-orange-300 rounded-lg hover:bg-orange-400 hover:text-white font-serif w-28 h-10 ">
+          <button className="capitalize font-medium border-2 border-green-300 rounded-lg hover:bg-green-600 transition-all hover:text-white font-serif w-28 h-10 ">
             Cart
           </button>
         </ul>
@@ -34,12 +34,12 @@ const Navbar = () => {
           className="cursor-pointer pr-4 z-20 md:hidden "
         >
           {nav ? (
-            <CloseRoundedIcon sx={{ color: "rgb(251, 146, 60)" }} />
+            <CloseRoundedIcon  />
           ) : (
-            <TableRowsRoundedIcon sx={{ color: "rgb(251, 146, 60)" }} />
+            <TableRowsRoundedIcon />
           )}
         </div>
-      </nav>
+      </div>
 
       {nav && (
         <ul className=" flex flex-col gap-4 text-xl justify-center items-center absolute top-0 left-0 w-full h-screen z-10 bg-white text-black">
@@ -53,12 +53,12 @@ const Navbar = () => {
               </li>
             );
           })}
-          <button className="capitalize font-medium border-2 border-orange-300 rounded-lg hover:bg-orange-400 hover:text-white font-serif w-28 h-10 ">
+          <button className="capitalize font-medium border-2 border-green-300 rounded-lg hover:bg-green-600 hover:text-white font-serif w-28 h-10 ">
             Cart
           </button>
         </ul>
       )}
-    </div>
+    </>
   );
 };
 

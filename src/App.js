@@ -8,11 +8,11 @@ import Home from './component/Home';
 const App = () => {
   return (
    <div className='main'>
-   {/* <Header /> */}
+   <Header />
    <Home/>
 
    {/* OutLet */}
-   <Outlet />
+   {/* <Outlet /> */}
 
    
 
