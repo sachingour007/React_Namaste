@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search";
 import RestaurantCards from "./RestaurantCards";
-import style from "./ResBody.module.css";
+// import style from "./ResBody.module.css";
 import LoaderShimmer from "./ShimmerUIBox/LoaderShimmer";
 import { NavLink } from "react-router-dom";
+import Home from "./Home";
 
 //SEARCH FUNCTION ALGORITHAM
 function filterData(searchText, restroList) {
@@ -42,7 +43,7 @@ const RestaurantBody = () => {
   };
 
   //not render component
-  if(restroList?.length === 0) return null;
+  if (restroList?.length === 0) return null;
 
   if (filteredRestroList?.length === 0) return <LoaderShimmer />;
 
@@ -50,13 +51,18 @@ const RestaurantBody = () => {
     <LoaderShimmer />
   ) : (
     <>
-      <div className={style.main_body}>
-        <Search
+      <Home />
+      <div className=" flex flex-col gap-6 my-10 items-center">
+        <div className="bg-green-600 py-2 px-3 font-medium text-white">
+          Our Menu
+        </div>
+        <h2 className="font-medium text-xl font-mono">Explore Our Menu</h2>
+        {/* <Search
           searchText={searchText}
           setSearchText={setSearchText}
           searchHandler={searchHandler}
-        />
-        <div className={style.cards}>
+        /> */}
+        <div className="sm:mx-4 sm:w-full sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 px-3">
           {filteredRestroList.map((restrorant) => {
             return (
               <NavLink
@@ -69,6 +75,7 @@ const RestaurantBody = () => {
           })}
         </div>
       </div>
+      <div className="border-[1px] border-gray-300"></div>
     </>
   );
 };

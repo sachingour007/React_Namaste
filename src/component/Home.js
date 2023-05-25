@@ -50,6 +50,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <div className="border-[1px] border-gray-300"></div>
     </>
   );
 };
