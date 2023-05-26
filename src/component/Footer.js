@@ -8,7 +8,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
-    <footer className="bg-pink-200">
+    <footer className="bg-pink-200 ">
       <div className="p-8 flex justify-between sm:items-stretch  flex-col sm:flex-row ">
         <div className="">
           <img className="w-24 h-20" src={footerLogo} alt="" />
@@ -38,7 +38,7 @@ const Footer = () => {
             Join Our Newsletter
           </h3>
           <input
-            className="py-1 px-10 mb-2"
+            className="py-1 min-w-full mb-2"
             type="email"
             placeholder="Enter your Email"
           />

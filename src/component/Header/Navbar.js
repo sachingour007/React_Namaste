@@ -7,7 +7,7 @@ import TableRowsRoundedIcon from "@mui/icons-material/TableRowsRounded";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const { id } = useParams();
-  console.log({ id });
+  // console.log({ id });
   return (
     <>
       <div className="flex items-center md:flex md:items-center">
