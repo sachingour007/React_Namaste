@@ -55705,7 +55705,7 @@ const RestaurantBody = ()=>{
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "sm:mx-4 sm:w-full sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 px-3",
+                                className: "sm:mx-4 sm:w-full sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-3",
                                 children: filteredRestroList.map((restrorant)=>{
                                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                                         to: "/restaurant/" + restrorant.data.id,
@@ -55822,48 +55822,99 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _imageUrl = require("../constants/imageUrl");
-const RestaurantCards = ({ name , cloudinaryImageId , cuisines , costForTwoString , lastMileTravelString  })=>{
+const RestaurantCards = ({ name , cloudinaryImageId , cuisines , avgRating , costForTwoString , slaString  })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "border-none rounded-2xl shadow-xl flex flex-col sm:items-center w-full p-2 sm:hover:scale-75 transition duration-300 ease-out hover:ease-in hover:scale-75",
+        className: "p-2 hover:border-gray-300 hover:border",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "w-full h-30 sm:pt-2 sm:w-64 sm:h-36 rounded-md",
+                className: "p-2 rounded-xl",
                 src: (0, _imageUrl.image) + cloudinaryImageId,
                 alt: "pizza"
-            }, void 0, false, {
-                fileName: "src/component/RestaurantCards.js",
-                lineNumber: 13,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "font-bold text-xl sm:font-medium sm:text-lg sm:self-start pl-1",
-                children: name
             }, void 0, false, {
                 fileName: "src/component/RestaurantCards.js",
                 lineNumber: 14,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "font-semibold text-md text-gray-500 sm:font-medium sm:text-sm sm:self-start pl-1",
-                children: cuisines[0] + " " + cuisines[1]
-            }, void 0, false, {
-                fileName: "src/component/RestaurantCards.js",
-                lineNumber: 15,
-                columnNumber: 7
-            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "font-semibold text-md text-gray-500 sm:font-medium sm:text-sm sm:self-start pl-1",
+                className: "pl-2",
                 children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        className: "font-semibold text-base",
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/component/RestaurantCards.js",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "pr-3",
-                        children: " • " + costForTwoString
+                        className: "text-gray-500 text-xs font-semibold",
+                        children: cuisines.join(", ")
                     }, void 0, false, {
                         fileName: "src/component/RestaurantCards.js",
                         lineNumber: 17,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: " • " + lastMileTravelString
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex items-center sm:gap-2",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center gap-1 font-medium text-xs text-white px-2 sm:px-1 bg-green-600 ",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "text-sm",
+                                            children: "★"
+                                        }, void 0, false, {
+                                            fileName: "src/component/RestaurantCards.js",
+                                            lineNumber: 21,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: avgRating === "--" ? "4.2" : avgRating
+                                        }, void 0, false, {
+                                            fileName: "src/component/RestaurantCards.js",
+                                            lineNumber: 24,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/component/RestaurantCards.js",
+                                    lineNumber: 20,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                                    fileName: "src/component/RestaurantCards.js",
+                                    lineNumber: 26,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "font-medium text-xs text-gray-500 ",
+                                    children: slaString
+                                }, void 0, false, {
+                                    fileName: "src/component/RestaurantCards.js",
+                                    lineNumber: 27,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "font-medium text-xs text-gray-500 ",
+                                        children: costForTwoString
+                                    }, void 0, false, {
+                                        fileName: "src/component/RestaurantCards.js",
+                                        lineNumber: 29,
+                                        columnNumber: 13
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/component/RestaurantCards.js",
+                                    lineNumber: 28,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/component/RestaurantCards.js",
+                            lineNumber: 19,
+                            columnNumber: 11
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/component/RestaurantCards.js",
                         lineNumber: 18,
@@ -55872,13 +55923,13 @@ const RestaurantCards = ({ name , cloudinaryImageId , cuisines , costForTwoStrin
                 ]
             }, void 0, true, {
                 fileName: "src/component/RestaurantCards.js",
-                lineNumber: 16,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/component/RestaurantCards.js",
-        lineNumber: 12,
+        lineNumber: 13,
         columnNumber: 5
     }, undefined);
 };

@@ -70,7 +70,7 @@ const RestaurantBody = () => {
             </div>
             </div>
             
-            <div className="sm:mx-4 sm:w-full sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 px-3">
+            <div className="sm:mx-4 sm:w-full sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-3">
               {filteredRestroList.map((restrorant) => {
                 return (
                   <NavLink
