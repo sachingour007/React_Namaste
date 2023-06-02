@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "../utils/image cover/pngwing.com.png";
+import footerLogo from "../assets/image cover/pngwing.com.png";
 // icons
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import InstagramIcon from "@mui/icons-material/Instagram";

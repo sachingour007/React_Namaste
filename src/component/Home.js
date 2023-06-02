@@ -1,8 +1,8 @@
 import React from "react";
-import homeImage from "../utils/image cover/hero_image.png";
-import discountPNG from "../utils/image cover/Icons/discount.png";
-import freshPNG from "../utils/image cover/Icons/fresh.png";
-import deliveryPNG from "../utils/image cover/Icons/delivery.png";
+import homeImage from "../assets/image cover/hero_image.png";
+import discountPNG from "../assets/image cover/Icons/discount.png";
+import freshPNG from "../assets/image cover/Icons/fresh.png";
+import deliveryPNG from "../assets/image cover/Icons/delivery.png";
 
 const Home = () => {
   return (

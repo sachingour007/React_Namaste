@@ -1,36 +1,59 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoaderShimmer from "../ShimmerUIBox/LoaderShimmer";
+import useRestaurantMenu from "../../utils/useRestaurantMenu";
 
 const FoodDetails = () => {
   const ParamId = useParams();
   const { id } = ParamId;
-  const [cardsDetails, setCardDetails] = useState(null);
 
-  useEffect(() => {
-    getRestroInfo();
-  }, []);
+  const [cardsDetails, menuList] = useRestaurantMenu(id);
+  console.log(menuList);
 
-  const getRestroInfo = async () => {
-    const res = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.2138156&lng=75.8647527&restaurantId=${id}&submitAction=ENTER`
-    );
-    const data = await res.json();
-    setCardDetails(data?.data?.cards[0]?.card?.card?.info);
-
-    // console.log(data.data.cards);
-  };
-  if(!cardsDetails) return null;
+  // if(!cardsDetails) return null;
 
   return cardsDetails === null ? (
     <LoaderShimmer />
   ) : (
-    <div>
-      <h2>{cardsDetails.name}</h2>
-      <h5>{cardsDetails.cuisines}</h5>
-      <p>{cardsDetails.areaName + " " + cardsDetails.avgRatingString + "km"}</p>
-      <h1>Restrarent ID : {cardsDetails.id}</h1>
-      <h3>Namster</h3>
+    <div className="w-3/4 mx-auto ">
+      <div className="flex items-start justify-between">
+        <div>
+          <h2 className="text-lg font-medium">{cardsDetails.name}</h2>
+          <h5 className="text-xs text-gray-500">{cardsDetails.cuisines.join(" , ")}</h5>
+          <p className="text-xs text-gray-500">
+            {cardsDetails.areaName + " " + cardsDetails.avgRatingString + "km"}
+          </p>
+        </div>
+        <div className="flex flex-col justify-center items-center">
+          <div
+            className={`bg-white border-gray-300 border flex items-center justify-center gap-1 font-medium text-xs px-7 sm:px-5 ${
+              cardsDetails.avgRating < "4.0"
+                ? "text-orange-500"
+                : "text-green-600"
+            }`}
+          >
+            <span className="text-sm font-extrabold ">★</span>
+            <span className="text-sm font-extrabold ">
+              {cardsDetails.avgRating === "--" ? "4.2" : cardsDetails.avgRating}
+            </span>
+          </div>
+          <div className="border-gray-300 border py-1 flex items-center gap-1 font-medium text-xs px-3 sm:px-1">
+            <span className="text-xs text-gray-400 ">
+              {cardsDetails.totalRatingsString}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="border-gray-100 border-b-2 my-4"></div>
+
+      <div>
+        <h1>
+         Recommended
+         
+          
+        </h1>
+
+      </div>
     </div>
   );
 };
