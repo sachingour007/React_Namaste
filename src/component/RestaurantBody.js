@@ -71,7 +71,7 @@ const RestaurantBody = () => {
             </div>
             
             <div className="sm:mx-4 sm:w-full sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-3">
-              {filteredRestroList.map((restrorant) => {
+              {filteredRestroList?.map((restrorant) => {
                 return (
                   <NavLink
                     to={"/restaurant/" + restrorant.data.id}

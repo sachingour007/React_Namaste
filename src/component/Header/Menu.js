@@ -6,22 +6,17 @@ export const NavBar = [
     },
     {
       id: 2,
-      Title: "About",
-      to: "/about"
+      Title: "Offers",
+      to: "/offers"
     },
     {
       id: 3,
-      Title: "Blog",
-      to: "/blog"
+      Title: "Help",
+      to: "/help"
     },
     {
       id: 4,
-      Title: "Contact",
-      to: "/contact"
-    },
-    {
-      id: 5,
-      Title: "Foods",
-      to: "/food"
+      Title: "Sign In",
+      to: "/signin"
     },
   ];

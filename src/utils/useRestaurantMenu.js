@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const useRestaurantMenu = (id) => {
   const [cardsDetails, setCardDetails] = useState(null);
-  const [menuList, setMenuList] = useState(null)
+  const [menuList, setMenuList] = useState([]);
 
   //Get data from API
   useEffect(() => {
@@ -15,12 +15,16 @@ const useRestaurantMenu = (id) => {
     );
     const data = await res.json();
     setCardDetails(data?.data?.cards[0]?.card?.card?.info);
-    setMenuList(data?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card?.itemCards)
+    setMenuList(
+      data?.data?.cards[3] === undefined
+        ? data?.data?.cards[2]
+        : data?.data?.cards[3]
+    );
 
-    console.log(data?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card?.itemCards);
+    console.log(data?.data?.cards[3]);
   };
 
-  // console.log(menuList);
+  console.log(menuList);
   //Retrun restrocardsDetails
   return [cardsDetails, menuList];
 };
