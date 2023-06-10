@@ -6,6 +6,7 @@ import RestaurantBody from "./src/component/RestaurantBody";
 import Contact from "./src/component/contact/Contact";
 import Errors from "./src/component/Errors";
 import FoodDetails from "./src/component/FoodDetails/FoodDetails";
+import Offers from "./src/component/Offers";
 
 
 const appRouter = createBrowserRouter([
@@ -25,6 +26,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:id",
         element:<FoodDetails />
+      },
+      {
+        path: "/offers",
+        element:<Offers />
       }
     ]
 

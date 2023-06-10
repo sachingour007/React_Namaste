@@ -19,8 +19,7 @@ const Home = () => {
             Enjoy Your Delicious Food
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            aliquam voluptatum vitae saepe quo expedita!
+          Money won’t be able to buy happiness, but it can get you this delicious meal instead.
           </p>
           <button className="bg-orange-400 self-start py-2 px-3 border-none hover:bg-orange-6 00 ">
             Explore Now
@@ -32,21 +31,21 @@ const Home = () => {
           <img src={discountPNG} alt="discountImg" />
           <div>
             <h2>Discount Voucher</h2>
-            <p className="">Lorem ipsum dolor sit amet consectetur.</p>
+            <p className="">Grab 50% Off & free Delivery.</p>
           </div>
         </div>
         <div className="flex items-center gap-4 hover:shadow-lg hover:rounded-lg p-1">
           <img src={freshPNG} alt="discountImg" />
           <div>
             <h2>Fresh Healthy Food</h2>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Healthy eating is a way of life.</p>
           </div>
         </div>
         <div className="flex items-center gap-4 md:mr-7 hover:shadow-lg hover:rounded-lg p-1">
           <img src={deliveryPNG} alt="discountImg" />
           <div>
             <h2>Fast Home Delivery</h2>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Food that is delivered at the right time.</p>
           </div>
         </div>
       </section>

@@ -8,15 +8,15 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
-    <footer className="bg-pink-200 ">
+    <footer className="bg-black ">
       <div className="p-8 flex justify-between sm:items-stretch  flex-col sm:flex-row ">
         <div className="">
           <img className="w-24 h-20" src={footerLogo} alt="" />
         </div>
 
         <div className="">
-          <h3 className="font-bold text-gray-400 text-base mb-2">Main Links</h3>
-          <ul className="">
+          <h3 className="font-bold text-gray-300 text-base mb-2">Main Links</h3>
+          <ul className="text-white">
             <li className="text-xs mb-1">Order Tracking</li>
             <li className="text-xs mb-1">New Order</li>
             <li className="text-xs mb-1">Contact Us</li>
@@ -25,8 +25,8 @@ const Footer = () => {
         </div>
 
         <div className="">
-          <h3 className="font-bold text-gray-400 text-base mb-2">Support</h3>
-          <ul>
+          <h3 className="font-bold text-gray-300 text-base mb-2">Support</h3>
+          <ul className="text-white">
             <li className="text-xs mb-1">About Us</li>
             <li className="text-xs mb-1">Privacy Policy</li>
             <li className="text-xs mb-1">Terms & Conditions</li>
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
 
         <div className="">
-          <h3 className="font-bold text-gray-400 text-base mb-2">
+          <h3 className="font-bold text-gray-300 text-base mb-2">
             Join Our Newsletter
           </h3>
           <input
@@ -42,7 +42,7 @@ const Footer = () => {
             type="email"
             placeholder="Enter your Email"
           />
-          <h3 className="font-bold text-gray-400 text-lg mb-2">Follow Us</h3>
+          <h3 className="font-bold text-gray-300 text-lg mb-2">Follow Us</h3>
           <div className="flex gap-3 text-lg">
             <div>
               <FacebookRoundedIcon />
