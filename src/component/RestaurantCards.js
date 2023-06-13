@@ -22,7 +22,7 @@ const RestaurantCards = ({
           {cuisines.join(", ")}
         </span>
         <div>
-          <div className="flex items-center sm:gap-2">
+          <div className="flex items-center gap-2 sm:gap-2">
             <div
               className={`text-white flex items-center gap-1 font-medium text-xs px-2 sm:px-1 ${
                 avgRating < "4.0" ? "bg-orange-500" : "bg-green-600"

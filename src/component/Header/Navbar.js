@@ -1,13 +1,20 @@
 import React, { useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { NavBar } from "./Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import TableRowsRoundedIcon from "@mui/icons-material/TableRowsRounded";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const { id } = useParams();
+  const navigate = useNavigate();
+
+  // const { id } = useParams();
   // console.log({ id });
+
+  const Handler = (Title) =>{
+   {Title === "Home" ? navigate(0) : null}
+  }
+  
   return (
     <>
       <div className="flex items-center md:flex md:items-center">
@@ -18,7 +25,7 @@ const Navbar = () => {
                 key={id}
                 className="px-4 cursor-pointer capitalize font-medium"
               >
-                <NavLink to={to}>{Title}</NavLink>
+                <NavLink onClick={() => Handler(Title)} to={to}>{Title}</NavLink>
               </li>
             );
           })}

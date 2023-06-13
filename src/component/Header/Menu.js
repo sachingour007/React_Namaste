@@ -1,7 +1,7 @@
 export const NavBar = [
     {
       id: 1,
-      Title: "home",
+      Title: "Home",
       to: "/"
     },
     {
