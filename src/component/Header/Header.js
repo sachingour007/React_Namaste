@@ -6,12 +6,10 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
 
-  
-    const navigateHanlder = () =>{
-      navigate(0)
-    }
-  
-  
+  const navigateHanlder = () => {
+    navigate(0);
+  };
+
   return (
     <nav className="w-full shadow-md sticky top-0 mb-8 bg-white p-2 z-10 ">
       <div className="flex justify-between items-center max-w-screen-xl mx-auto">

@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { NavBar } from "./Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import TableRowsRoundedIcon from "@mui/icons-material/TableRowsRounded";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const navigate = useNavigate();
 
   // const { id } = useParams();
   // console.log({ id });
 
-  const Handler = (Title) =>{
-   {Title === "Home" ? navigate(0) : null}
-  }
-  
   return (
     <>
       <div className="flex items-center md:flex md:items-center">
@@ -25,7 +20,7 @@ const Navbar = () => {
                 key={id}
                 className="px-4 cursor-pointer capitalize font-medium"
               >
-                <NavLink onClick={() => Handler(Title)} to={to}>{Title}</NavLink>
+                <NavLink to={to}>{Title}</NavLink>
               </li>
             );
           })}
@@ -40,11 +35,7 @@ const Navbar = () => {
           }}
           className="cursor-pointer pr-4 z-20 md:hidden "
         >
-          {nav ? (
-            <CloseRoundedIcon  />
-          ) : (
-            <TableRowsRoundedIcon />
-          )}
+          {nav ? <CloseRoundedIcon /> : <TableRowsRoundedIcon />}
         </div>
       </div>
 
