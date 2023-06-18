@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { helpData } from "../constants/helpData";
-
 import AcordianHelp from "./AcordianHelp";
+
 const Help = () => {
   return (
     <main className="bg-blue-100 -mt-7 flex items-center justify-center flex-col">
