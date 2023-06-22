@@ -8,6 +8,7 @@ import Errors from "./src/component/Errors";
 import FoodDetails from "./src/component/FoodDetails/FoodDetails";
 import Offers from "./src/component/Offers";
 import Help from "./src/component/Help";
+import Cart from "./src/component/Cart";
 
 const appRouter = createBrowserRouter([
   {
@@ -31,7 +32,10 @@ const appRouter = createBrowserRouter([
         path: "/help",
         element: <Help />,
       },
-      
+      {
+        path: '/cart',
+        element: <Cart/>
+      }
     ],
   },
 ]);

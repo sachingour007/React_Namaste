@@ -3,12 +3,11 @@ import { NavLink } from "react-router-dom";
 import { NavBar } from "./Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import TableRowsRoundedIcon from "@mui/icons-material/TableRowsRounded";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-
-  // const { id } = useParams();
-  // console.log({ id });
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <>
@@ -25,9 +24,12 @@ const Navbar = () => {
             );
           })}
 
-          <button className="capitalize font-medium border-2 border-green-300 rounded-lg hover:bg-green-600 transition-all hover:text-white font-serif w-28 h-10 ">
-            Cart
-          </button>
+          <NavLink to={"/cart"}>
+            <button className="capitalize font-medium border-2 border-green-300 rounded-lg hover:bg-green-600 transition-all hover:text-white font-mono w-28 h-10 ">
+              Cart{" "}
+              {cartItems.length === 0 ? "" : <span>{cartItems.length}</span>}
+            </button>
+          </NavLink>
         </ul>
         <div
           onClick={() => {
@@ -51,9 +53,12 @@ const Navbar = () => {
               </li>
             );
           })}
-          <button className="capitalize font-medium border-2 border-green-300 rounded-lg hover:bg-green-600 hover:text-white font-serif w-28 h-10 ">
-            Cart
-          </button>
+          <NavLink to={"/cart"}>
+            <button className="capitalize font-medium border-2 border-green-300 rounded-lg hover:bg-green-600 hover:text-white font-mono w-28 h-10 ">
+              Cart{" "}
+              {cartItems.length === 0 ? "" : <span>{cartItems.length}</span>}
+            </button>
+          </NavLink>
         </ul>
       )}
     </>

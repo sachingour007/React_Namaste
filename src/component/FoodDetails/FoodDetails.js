@@ -3,16 +3,24 @@ import { image } from "../../constants/imageUrl";
 import { useParams } from "react-router-dom";
 import LoaderShimmer from "../ShimmerUIBox/LoaderShimmer";
 import useRestaurantMenu from "../../utils/useRestaurantMenu";
+import { addItem } from "../../utils/cartSlice";
+import { useDispatch } from "react-redux";
 
 const FoodDetails = () => {
   const ParamId = useParams();
   const { id } = ParamId;
+  const dispatch = useDispatch();
 
   const [cardsDetails, menuList] = useRestaurantMenu(id);
   console.log(menuList);
 
   // if(!cardsDetails) return null;
   // if(!menuList) return null;
+
+  const handleAddItem = (card) => {
+    dispatch(addItem(card));
+    console.log(card);
+  };
 
   return cardsDetails === null ? (
     <LoaderShimmer />
@@ -70,13 +78,17 @@ const FoodDetails = () => {
               key={card?.card?.info?.id}
             >
               <div className="w-3/4 mx-2 my-3 p-2">
-                <h2 className="text-lg font-semibold">{card?.card?.info?.name}</h2>
+                <h2 className="text-lg font-semibold">
+                  {card?.card?.info?.name}
+                </h2>
                 <h4 className="text-lg font-semibold">
                   {card?.card?.info?.price
                     ? "₹" + card?.card?.info?.price / 100
                     : "₹" + 150}
                 </h4>
-                <p className="text-justify text-gray-500 text-sm font-medium">{card?.card?.info?.description}</p>
+                <p className="text-justify text-gray-500 text-sm font-medium">
+                  {card?.card?.info?.description}
+                </p>
               </div>
               <div className="sm:w-1/4 flex justify-center flex-col mx-2 my-3 p-2 relative ">
                 <img
@@ -84,7 +96,12 @@ const FoodDetails = () => {
                   src={image + card?.card?.info?.imageId}
                   alt=""
                 />
-                <button className="text-green-500 font-semibold text-lg border self-center px-6 py-1 rounded-lg bg-white absolute -bottom-3">Add</button>
+                <button
+                  className="text-green-500 font-semibold text-lg border self-center px-6 py-1 rounded-lg bg-white absolute -bottom-3"
+                  onClick={() => handleAddItem(card?.card?.info)}
+                >
+                  Add
+                </button>
               </div>
             </div>
           );

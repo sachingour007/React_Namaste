@@ -4,7 +4,7 @@ import AcordianHelp from "./AcordianHelp";
 
 const Help = () => {
   return (
-    <main className="bg-blue-100 -mt-7 flex items-center justify-center flex-col">
+    <main className="bg-slate-50 -mt-7 flex items-center justify-center flex-col">
       <div className="shadow-2xl bg-white w-[90vw] max-w-[800px] my-16 mx-auto p-8 rounded-lg">
         <div className="mb-10">
           <h1 className="text-black text-lg font-bold">Help & Support</h1>
