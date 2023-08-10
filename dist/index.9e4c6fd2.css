@@ -283,10 +283,6 @@ img, video {
   margin: 1.25rem;
 }
 
-.-m-7 {
-  margin: -1.75rem;
-}
-
 .mx-1 {
   margin-left: .25rem;
   margin-right: .25rem;
@@ -384,8 +380,8 @@ img, video {
   margin-top: 1.25rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
+.block {
+  display: block;
 }
 
 .flex {
@@ -696,6 +692,21 @@ img, video {
   padding-bottom: .5rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-1 {
+  padding-left: .25rem;
+  padding-right: .25rem;
+}
+
+.py-3 {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
 .pl-2 {
   padding-left: .5rem;
 }
@@ -719,6 +730,11 @@ img, video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -759,11 +775,6 @@ img, video {
 .text-xs {
   font-size: .75rem;
   line-height: 1rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {

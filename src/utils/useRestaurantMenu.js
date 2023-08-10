@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 const useRestaurantMenu = (id) => {
   const [cardsDetails, setCardDetails] = useState(null);
   const [menuList, setMenuList] = useState([]);
@@ -11,7 +12,7 @@ const useRestaurantMenu = (id) => {
 
   const getRestroInfo = async () => {
     const res = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.2138156&lng=75.8647527&restaurantId=${id}`
+      `https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.2138156&lng=75.8647527&restaurantId=${id}`
     );
     const data = await res.json();
     setCardDetails(data?.data?.cards[0]?.card?.card?.info);
