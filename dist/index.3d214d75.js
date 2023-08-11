@@ -27238,7 +27238,7 @@ const App = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined)
         ]
@@ -57319,7 +57319,7 @@ var _youTube = require("@mui/icons-material/YouTube");
 var _youTubeDefault = parcelHelpers.interopDefault(_youTube);
 const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
-        className: "bg-black ",
+        className: "bg-black w-full ",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "p-8 flex justify-between sm:items-stretch flex-col sm:flex-row ",
             children: [
@@ -65122,7 +65122,7 @@ const Cart = ()=>{
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: cartItems.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "m-5 flex justify-center flex-col ",
+            className: "m-5 flex justify-center flex-col min-h-[48vh]",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     className: "font-semibold text-3xl text-red-600",
@@ -65149,7 +65149,7 @@ const Cart = ()=>{
             lineNumber: 19,
             columnNumber: 9
         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "border-black border -mt-7 bg-gradient-to-t from-white to-slate-100 flex flex-col items-center ",
+            className: "-mt-7 bg-gradient-to-t from-white to-slate-100 flex flex-col items-center min-h-[60vh] ",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                     className: "self-start ml-5 mt-2 text-lg font-medium ",

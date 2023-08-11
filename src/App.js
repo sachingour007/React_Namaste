@@ -13,6 +13,7 @@ const App = () => {
 
       {/* OutLet */}
       <Outlet />
+
       <Footer />
     </Provider>
   );

@@ -8,8 +8,8 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
-    <footer className="bg-black ">
-      <div className="p-8 flex justify-between sm:items-stretch  flex-col sm:flex-row ">
+    <footer className="bg-black w-full ">
+      <div className="p-8 flex justify-between sm:items-stretch flex-col sm:flex-row ">
         <div className="">
           <img className="w-24 h-20" src={footerLogo} alt="" />
         </div>

@@ -16,7 +16,7 @@ const Cart = () => {
   return (
     <>
       {cartItems.length === 0 ? (
-        <div className="m-5 flex justify-center flex-col ">
+        <div className="m-5 flex justify-center flex-col min-h-[48vh]">
           <h2 className="font-semibold text-3xl text-red-600">Sorry !</h2>
           <h2 className="font-semibold text-3xl text-red-600">
             {" "}
@@ -24,7 +24,7 @@ const Cart = () => {
           </h2>
         </div>
       ) : (
-        <div className="border-black border -mt-7 bg-gradient-to-t from-white to-slate-100 flex flex-col items-center ">
+        <div className="-mt-7 bg-gradient-to-t from-white to-slate-100 flex flex-col items-center min-h-[60vh] ">
           <h1 className="self-start ml-5 mt-2 text-lg font-medium ">
             Cart Items :
             <span className="mx-3" onClick={() => clearCartHandler()}>

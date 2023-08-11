@@ -1,3 +1,8 @@
 .active {
   color: rgb(153, 13, 36);
 }
+.main_div{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
