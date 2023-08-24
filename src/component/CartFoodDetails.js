@@ -3,7 +3,7 @@ import { image } from "../constants/imageUrl";
 import { useDispatch } from "react-redux";
 import { removeItem } from "../utils/cartSlice";
 
-const CartFoodDetails = ({ imageId, id, name, price }) => {
+const CartFoodDetails = ({ imageId, id, name, price, defaultPrice}) => {
   const dispatch = useDispatch();
 
   const cartRemoveHandler = (id) => {
@@ -22,7 +22,7 @@ const CartFoodDetails = ({ imageId, id, name, price }) => {
       <div className="flex-1 p-2 m-2">
         <h1 className="text-2xl font-bold text-center m-2">{name}</h1>
         <div className="flex flex-col sm:flex-row sm:justify-around justify-center items-center">
-          <div className="p-2 text-lg font-bold">₹{price / 100}</div>
+          <div className="p-2 text-lg font-bold">{price ? `₹${price / 100}` : `₹${defaultPrice / 100}`} </div>
           <button
             className="border bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold"
             onClick={() => cartRemoveHandler(id)}

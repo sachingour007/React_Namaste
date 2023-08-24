@@ -65148,49 +65148,91 @@ const Cart = ()=>{
             fileName: "src/component/Cart.js",
             lineNumber: 19,
             columnNumber: 9
-        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "-mt-7 bg-gradient-to-t from-white to-slate-100 flex flex-col items-center min-h-[60vh] ",
+        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "self-start ml-5 mt-2 text-lg font-medium ",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "-mt-7 bg-gradient-to-t from-white to-slate-100 flex flex-col items-center min-h-[60vh] ",
                     children: [
-                        "Cart Items :",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: "mx-3",
-                            onClick: ()=>clearCartHandler(),
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _removeShoppingCartDefault.default), {
-                                fontSize: "large"
-                            }, void 0, false, {
-                                fileName: "src/component/Cart.js",
-                                lineNumber: 31,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "self-start ml-5 mt-2 text-lg font-medium ",
+                            children: [
+                                "Cart Items :",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "mx-3",
+                                    onClick: ()=>clearCartHandler(),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _removeShoppingCartDefault.default), {
+                                        fontSize: "large"
+                                    }, void 0, false, {
+                                        fileName: "src/component/Cart.js",
+                                        lineNumber: 32,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/component/Cart.js",
+                                    lineNumber: 31,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
                             fileName: "src/component/Cart.js",
-                            lineNumber: 30,
+                            lineNumber: 29,
                             columnNumber: 13
-                        }, undefined)
+                        }, undefined),
+                        cartItems.map((items)=>{
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartFoodDetailsDefault.default), {
+                                ...items
+                            }, items.id, false, {
+                                fileName: "src/component/Cart.js",
+                                lineNumber: 36,
+                                columnNumber: 22
+                            }, undefined);
+                        })
                     ]
                 }, void 0, true, {
                     fileName: "src/component/Cart.js",
                     lineNumber: 28,
                     columnNumber: 11
                 }, undefined),
-                cartItems.map((items)=>{
-                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartFoodDetailsDefault.default), {
-                        ...items
-                    }, items.id, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "bg-white mx-auto w-3/4 my-4 md:w-2/4 flex flex-row items-center justify-around border rounded-lg",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "font-bold",
+                                children: "Total"
+                            }, void 0, false, {
+                                fileName: "src/component/Cart.js",
+                                lineNumber: 41,
+                                columnNumber: 15
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "font-semibold",
+                                children: [
+                                    "₹",
+                                    cartItems.reduce((total, { price , defaultPrice  })=>{
+                                        return total + (price ? price : defaultPrice) / 100;
+                                    }, 0),
+                                    "/-"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/component/Cart.js",
+                                lineNumber: 42,
+                                columnNumber: 15
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/component/Cart.js",
-                        lineNumber: 35,
-                        columnNumber: 20
-                    }, undefined);
-                })
+                        lineNumber: 40,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/component/Cart.js",
+                    lineNumber: 39,
+                    columnNumber: 11
+                }, undefined)
             ]
-        }, void 0, true, {
-            fileName: "src/component/Cart.js",
-            lineNumber: 27,
-            columnNumber: 9
-        }, undefined)
+        }, void 0, true)
     }, void 0, false);
 };
 _s(Cart, "ClsVU7OzYQ50hVvtHIih2dVFL+s=", false, function() {
@@ -65225,7 +65267,7 @@ var _imageUrl = require("../constants/imageUrl");
 var _reactRedux = require("react-redux");
 var _cartSlice = require("../utils/cartSlice");
 var _s = $RefreshSig$();
-const CartFoodDetails = ({ imageId , id , name , price  })=>{
+const CartFoodDetails = ({ imageId , id , name , price , defaultPrice  })=>{
     _s();
     const dispatch = (0, _reactRedux.useDispatch)();
     const cartRemoveHandler = (id)=>{
@@ -65267,8 +65309,8 @@ const CartFoodDetails = ({ imageId , id , name , price  })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "p-2 text-lg font-bold",
                                 children: [
-                                    "₹",
-                                    price / 100
+                                    price ? `₹${price / 100}` : `₹${defaultPrice / 100}`,
+                                    " "
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/CartFoodDetails.js",
