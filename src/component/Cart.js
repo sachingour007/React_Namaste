@@ -42,7 +42,9 @@ const Cart = () => {
               <p className="font-semibold">
                 ₹
                 {cartItems.reduce((total, { price, defaultPrice }) => {
-                  return total + (price ? price : defaultPrice) / 100;
+                  return (
+                    total + Math.round((price ? price : defaultPrice) / 100)
+                  );
                 }, 0)}
                 /-
               </p>
