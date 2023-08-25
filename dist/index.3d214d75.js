@@ -2503,10 +2503,10 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"gfC4k":[function(require,module,exports) {
+},{}],"8BXtR":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
-var HMR_PORT = 1234;
+var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 module.bundle.HMR_BUNDLE_ID = "0a8ecb283d214d75";
@@ -61624,7 +61624,8 @@ const cartSlice = (0, _toolkit.createSlice)({
             state.items.push(action.payload);
         },
         removeItem: (state, action)=>{
-            state.items.pop();
+            let removeItem = (0, _toolkit.current)(state.items).filter((item)=>item.id !== action.payload);
+            state.items = removeItem;
         },
         clearCart: (state)=>{
             state.items = [];
@@ -65374,6 +65375,6 @@ var _default = (0, _createSvgIcon.default)(/*#__PURE__*/ (0, _jsxRuntime.jsx)("p
 }), "RemoveShoppingCart");
 exports.default = _default;
 
-},{"ecab33a172a3d5fc":"7XM86","8d5bdc16026268cd":"lVV9C","74f9c957053bdc2b":"6AEwr"}]},["1xC6H","gfC4k","bB7Pu"], "bB7Pu", "parcelRequirece94")
+},{"ecab33a172a3d5fc":"7XM86","8d5bdc16026268cd":"lVV9C","74f9c957053bdc2b":"6AEwr"}]},["1xC6H","8BXtR","bB7Pu"], "bB7Pu", "parcelRequirece94")
 
 //# sourceMappingURL=index.3d214d75.js.map
