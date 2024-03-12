@@ -6,7 +6,6 @@ import RestaurantCards from "./RestaurantCards";
 import LoaderShimmer from "./ShimmerUIBox/LoaderShimmer";
 import { NavLink } from "react-router-dom";
 import Home from "./Home";
-import DataNotFound from "./DataNotFound";
 
 //SEARCH FUNCTION ALGORITHAM
 function filterData(searchText, restroList) {
@@ -43,6 +42,7 @@ const RestaurantBody = () => {
     try {
       const response = await fetch(swiggy_api_URL);
       const json = await response.json();
+      console.log(json);
 
       // initialize checkJsonData() function to check Swiggy Restaurant data
       async function checkJsonData(jsonData) {
@@ -65,6 +65,7 @@ const RestaurantBody = () => {
       // update the state variable restaurants with Swiggy API data
       setRestroList(resData);
       setFilteredRestroList(resData);
+      console.log(resData);
     } catch (error) {
       console.log(error);
     }

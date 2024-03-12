@@ -12,7 +12,7 @@ const useRestaurantMenu = (id) => {
 
   const getRestroInfo = async () => {
     const res = await fetch(
-      `https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.2138156&lng=75.8647527&restaurantId=${id}`
+      `https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.07480&lng=72.88560&restaurantId=${id}`
     );
     const data = await res.json();
     setCardDetails(data?.data?.cards[0]?.card?.card?.info);
