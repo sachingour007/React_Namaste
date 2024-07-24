@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartFoodDetails from "./CartFoodDetails";
 import { clearCart } from "../utils/cartSlice";
-
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 
 const Cart = () => {

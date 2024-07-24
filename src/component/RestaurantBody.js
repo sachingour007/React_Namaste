@@ -71,6 +71,7 @@ const RestaurantBody = () => {
     }
   }
 
+  
   //SEARCH BUTTON HANDLER
   const searchHandler = () => {
     const data = filterData(searchText, restroList);

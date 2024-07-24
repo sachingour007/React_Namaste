@@ -1,5 +1,7 @@
+// export const image =
+//   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 export const image =
-  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320/";
 export const LOGO_URL =
   "https://cdn.dotpe.in/longtail/store-logo/7781322/efYdpGRb.jpeg";
 
@@ -1991,7 +1993,7 @@ export const ITEM_IMG_CDN_URL =
 
 // Swiggy API to get Restaurant data with corsproxy
 export const swiggy_api_URL =
-  "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.2960587&lng=85.824539&is-seo-homepage";
+  "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2990485&lng=72.8547727&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 // Swiggy API to get Restaurant Menu data with corsproxy
 // export const swiggy_menu_api_URL =

@@ -13,6 +13,7 @@ const FoodDetails = () => {
 
   const [cardsDetails, menuList] = useRestaurantMenu(id);
   console.log(menuList);
+  console.log(cardsDetails);
 
   // if(!cardsDetails) return null;
   // if(!menuList) return null;
@@ -21,6 +22,10 @@ const FoodDetails = () => {
     dispatch(addItem(card));
     console.log(card);
   };
+  console.log(
+    menuList?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+      ?.itemCards
+  );
 
   return cardsDetails === null ? (
     <LoaderShimmer />
@@ -59,53 +64,58 @@ const FoodDetails = () => {
 
       <div className="border-gray-100 border-b-2 my-4"></div>
 
-      <h1>
-        Recommended (
-        {
-          menuList?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards?.map(
-            () => null
-          ).length
-        }
-        )
-      </h1>
-
-      {menuList?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards?.map(
-        (card) => {
-          console.log(card);
-          return (
-            <div
-              className=" flex flex-col items-center sm:flex-row"
-              key={card?.card?.info?.id}
-            >
-              <div className="w-3/4 mx-2 my-3 p-2">
-                <h2 className="text-lg font-semibold">
-                  {card?.card?.info?.name}
-                </h2>
-                <h4 className="text-lg font-semibold">
-                  {card?.card?.info?.price
-                    ? "₹" + card?.card?.info?.price / 100
-                    : "₹" + 150}
-                </h4>
-                <p className="text-justify text-gray-500 text-sm font-medium">
-                  {card?.card?.info?.description}
-                </p>
-              </div>
-              <div className="sm:w-1/4 flex justify-center flex-col mx-2 my-3 p-2 relative ">
-                <img
-                  className="w-40 sm:w-32 h-24 rounded self-center object-cover"
-                  src={image + card?.card?.info?.imageId}
-                  alt=""
-                />
-                <button
-                  className="text-green-500 font-semibold text-lg border self-center px-6 py-1 rounded-lg bg-white absolute -bottom-3"
-                  onClick={() => handleAddItem(card?.card?.info)}
+      {menuList?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards === undefined ? (
+        "No Data Found"
+      ) : (
+        <>
+          <h1>
+            Recommended (
+            {
+              menuList?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map(
+                () => null
+              ).length
+            }
+            )
+          </h1>
+          {menuList?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map(
+            (card) => {
+              console.log(card);
+              return (
+                <div
+                  className=" flex flex-col items-center sm:flex-row"
+                  key={card?.card?.info?.id}
                 >
-                  Add
-                </button>
-              </div>
-            </div>
-          );
-        }
+                  <div className="w-3/4 mx-2 my-3 p-2">
+                    <h2 className="text-lg font-semibold">
+                      {card?.card?.info?.name}
+                    </h2>
+                    <h4 className="text-lg font-semibold">
+                      {card?.card?.info?.price
+                        ? "₹" + card?.card?.info?.price / 100
+                        : "₹" + 150}
+                    </h4>
+                    <p className="text-justify text-gray-500 text-sm font-medium">
+                      {card?.card?.info?.description}
+                    </p>
+                  </div>
+                  <div className="sm:w-1/4 flex justify-center flex-col mx-2 my-3 p-2 relative ">
+                    <img
+                      className="w-40 sm:w-32 h-24 rounded self-center object-cover"
+                      src={image + card?.card?.info?.imageId}
+                      alt=""
+                    />
+                    <button
+                      className="text-green-500 font-semibold text-lg border self-center px-6 py-1 rounded-lg bg-white absolute -bottom-3"
+                      onClick={() => handleAddItem(card?.card?.info)}
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              );
+            }
+          )}
+        </>
       )}
     </div>
   );
