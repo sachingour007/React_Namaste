@@ -64033,6 +64033,24 @@ const shimmer_card_unit = 20;
 const shimmer_menu_card_unit = 4;
 const MENU_ITEM_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
 const RESTAURANT_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.Restaurant";
+const func = async ()=>{
+    const url = "https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/get-info?restaurantId=522995";
+    const options = {
+        method: "GET",
+        headers: {
+            "x-rapidapi-key": "749cfc579fmshe890e86c9b364f7p10767ejsn4fdc0e320653",
+            "x-rapidapi-host": "the-fork-the-spoon.p.rapidapi.com"
+        }
+    };
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+};
+func();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6ayBQ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0e09 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -64075,8 +64093,8 @@ $RefreshReg$(_c, "LoaderShimmer");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./LoaderShimmer.module.css":"4pYKI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4pYKI":[function(require,module,exports) {
-module.exports["blank_card"] = `_1FkLMG_blank_card`;
 module.exports["main_shimmer"] = `_1FkLMG_main_shimmer`;
+module.exports["blank_card"] = `_1FkLMG_blank_card`;
 
 },{}],"huc3W":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8c59 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
