@@ -61979,11 +61979,11 @@ parcelHelpers.export(exports, "URL", ()=>URL);
 parcelHelpers.export(exports, "restData", ()=>restData);
 parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
 parcelHelpers.export(exports, "ITEM_IMG_CDN_URL", ()=>ITEM_IMG_CDN_URL);
-parcelHelpers.export(exports, "swiggy_api_URL", ()=>swiggy_api_URL);
 parcelHelpers.export(exports, "shimmer_card_unit", ()=>shimmer_card_unit);
 parcelHelpers.export(exports, "shimmer_menu_card_unit", ()=>shimmer_menu_card_unit);
 parcelHelpers.export(exports, "MENU_ITEM_TYPE_KEY", ()=>MENU_ITEM_TYPE_KEY);
 parcelHelpers.export(exports, "RESTAURANT_TYPE_KEY", ()=>RESTAURANT_TYPE_KEY);
+parcelHelpers.export(exports, "swiggy_api_URL", ()=>swiggy_api_URL);
 const image = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320/";
 const LOGO_URL = "https://cdn.dotpe.in/longtail/store-logo/7781322/efYdpGRb.jpeg";
 const URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.07480&lng=72.88560&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
@@ -64028,29 +64028,12 @@ const restData = [
 ];
 const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 const ITEM_IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
-const swiggy_api_URL = "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2990485&lng=72.8547727&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 const shimmer_card_unit = 20;
 const shimmer_menu_card_unit = 4;
 const MENU_ITEM_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
 const RESTAURANT_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.Restaurant";
-const func = async ()=>{
-    const url = "https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/get-info?restaurantId=522995";
-    const options = {
-        method: "GET",
-        headers: {
-            "x-rapidapi-key": "749cfc579fmshe890e86c9b364f7p10767ejsn4fdc0e320653",
-            "x-rapidapi-host": "the-fork-the-spoon.p.rapidapi.com"
-        }
-    };
-    try {
-        const response = await fetch(url, options);
-        const result = await response.json();
-        console.log(result);
-    } catch (error) {
-        console.error(error);
-    }
-};
-func();
+const swiggy_api_URL = "https://foodfire.onrender.com/api/restaurants?lat=12.971599&lng=77.594566&page_type=DESKTOP_WEB_LISTING"; // export const MENU_API_URL = 
+ // "https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=12.971599&lng=77.594566&restaurantId="
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6ayBQ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0e09 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -64951,9 +64934,12 @@ const useRestaurantMenu = (id)=>{
         getRestroInfo();
     }, []);
     const getRestroInfo = async ()=>{
-        const res = await fetch(`https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.2990485&lng=72.8547727&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`);
+        // const res = await fetch(
+        //   `https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.2990485&lng=72.8547727&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
+        // );
+        const res = await fetch(`https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=12.971599&lng=77.594566&restaurantId=${id}`);
         const data = await res.json();
-        // console.log(data?.data?.cards[2].card.card.info);
+        console.log(data);
         setCardDetails(data?.data?.cards[2]?.card?.card?.info);
         setMenuList(data?.data?.cards[4]);
     // console.log(data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);

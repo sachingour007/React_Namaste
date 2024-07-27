@@ -1992,8 +1992,8 @@ export const ITEM_IMG_CDN_URL =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
 
 // Swiggy API to get Restaurant data with corsproxy
-export const swiggy_api_URL =
-  "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2990485&lng=72.8547727&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+// export const swiggy_api_URL =
+//   "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2990485&lng=72.8547727&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 // Swiggy API to get Restaurant Menu data with corsproxy
 // export const swiggy_menu_api_URL =
@@ -2010,3 +2010,11 @@ export const MENU_ITEM_TYPE_KEY =
   "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
 export const RESTAURANT_TYPE_KEY =
   "type.googleapis.com/swiggy.presentation.food.v2.Restaurant";
+
+//Fresh Details
+
+export const swiggy_api_URL =
+  "https://foodfire.onrender.com/api/restaurants?lat=12.971599&lng=77.594566&page_type=DESKTOP_WEB_LISTING";
+
+// export const MENU_API_URL = 
+// "https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=12.971599&lng=77.594566&restaurantId="
